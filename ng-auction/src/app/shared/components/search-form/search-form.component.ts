@@ -25,7 +25,7 @@ export class SearchFormComponent {
     this.searchForm = fb.group({
       title: [, Validators.minLength(2)],
       minPrice: [, Validators.min(0)],
-      maxPrice: [, Validators.min(0), Validators.max(10000)]
+      maxPrice: [, [Validators.min(0), Validators.max(10000)]]
     },
       {
         validator: [minLessThanMaxValidator]

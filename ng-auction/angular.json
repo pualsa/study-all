@@ -130,5 +130,8 @@
       }
     }
   },
-  "defaultProject": "ng-auction"
+  "defaultProject": "ng-auction",
+  "cli": {
+    "analytics": false
+  }
 }
