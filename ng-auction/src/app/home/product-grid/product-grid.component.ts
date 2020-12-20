@@ -11,7 +11,7 @@ import { Product } from 'src/app/shared/services';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductGridComponent {
-  @Input() products?: Product[];
+  @Input() products?: Product[] | null;
   readonly columns$: Observable<number>;
   readonly breakpointsToColumnsNumber = new Map([
     ['xs', 2],
