@@ -11,6 +11,11 @@ export interface Product {
   description: string;
 }
 
+export interface ProductSearchParams {
+  title?: string;
+  minPrice?: number;
+  maxPrice?: number;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -28,5 +33,19 @@ export class ProductService {
     .pipe(
       map(products => <Product>products.find(p => p.id === id) )
     );
+  }
+
+  search(params: ProductSearchParams) : Observable<Product[]> {
+    return this.http.get<Product[]>('/data/products.json').pipe(
+      map(products => this.filterProducts(products, params))
+    );
+  }
+
+  // Keep only those product that meet the criteria from search params
+  private filterProducts(products: Product[], params: ProductSearchParams): Product[] {
+    return products
+      .filter(p => params.title ? p.title.toLowerCase().includes((<string>params.title).toLowerCase()) : products)
+      .filter(p => params.minPrice ? p.price >= params.minPrice : products)
+      .filter(p => params.maxPrice ? p.price <= params.maxPrice : products);
   }
 }

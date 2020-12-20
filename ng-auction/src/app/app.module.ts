@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
@@ -23,6 +24,7 @@ import { SearchFormModule } from "./shared/components";
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,
+    MatSidenavModule,
     FlexLayoutModule,
     HttpClientModule,
 

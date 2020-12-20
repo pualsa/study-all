@@ -5,9 +5,11 @@ import { RouterModule } from "@angular/router";
 import { MatGridListModule } from "@angular/material/grid-list";
 
 import { HomeComponent } from './home.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
+import { ProductGridComponent } from './product-grid/product-grid.component';
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, SearchResultsComponent, ProductGridComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([
