@@ -3,9 +3,8 @@
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
-// 9090
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://localhost:8080',
-  wsUrl: 'ws://localhost:8080'
+  apiBaseUrl: 'http://localhost:9090',
+  wsUrl: 'ws://localhost:9090'
 };
