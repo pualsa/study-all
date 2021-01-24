@@ -24,6 +24,14 @@ export interface ProductSearchParams {
 export class ProductService {
   constructor(private http: HttpClient) {}
 
+  // Populate an array with categories values of each product
+  private static reduceCategories(products: Product[]): string[] {
+    return products.reduce(
+      (all, product) => all.concat(product.categories),
+      new Array<string>()
+    );
+  }
+
   getAll(): Observable<Product[]> {
     return this.http.get<Product[]>('/data/products.json');
   }
@@ -58,7 +66,7 @@ export class ProductService {
     return products
       .filter((p) =>
         params.title
-          ? p.title.toLowerCase().includes((<string>params.title).toLowerCase())
+          ? p.title.toLowerCase().includes((params.title).toLowerCase())
           : products
       )
       .filter((p) => (params.minPrice ? p.price >= params.minPrice : products))
@@ -80,18 +88,10 @@ export class ProductService {
           JSON.stringify(value[0]['categories'])
         )
       ),
-      map(this.reduceCategories),
+      map(ProductService.reduceCategories),
       tap((value) => console.log(`After reducing categories ${value}`)),
       map((categories) => Array.from(new Set(categories))),
       tap((value) => console.log(`After creating categories array ${value}`))
-    );
-  }
-
-  // Populate an array with categories values of each product
-  private reduceCategories(products: Product[]): string[] {
-    return products.reduce(
-      (all, product) => all.concat(product.categories),
-      new Array<string>()
     );
   }
 }
