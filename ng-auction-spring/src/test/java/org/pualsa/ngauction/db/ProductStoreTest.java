@@ -1,4 +1,4 @@
-package org.alsa.firstdemo.db;
+package org.pualsa.ngauction.db;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;

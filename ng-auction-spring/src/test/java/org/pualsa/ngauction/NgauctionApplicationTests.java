@@ -1,10 +1,10 @@
-package org.alsa.firstdemo;
+package org.pualsa.ngauction;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FirstdemoApplicationTests {
+class NgauctionApplicationTests {
 
 	@Test
 	void contextLoads() {

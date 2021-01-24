@@ -1,4 +1,4 @@
-package org.alsa.firstdemo.db;
+package org.pualsa.ngauction.db;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,7 +11,7 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import org.alsa.firstdemo.rest.ProductSearchParams;
+import org.pualsa.ngauction.rest.ProductSearchParams;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;

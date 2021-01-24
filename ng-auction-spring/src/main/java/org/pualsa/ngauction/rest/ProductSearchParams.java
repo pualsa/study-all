@@ -1,4 +1,4 @@
-package org.alsa.firstdemo.rest;
+package org.pualsa.ngauction.rest;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package org.alsa.firstdemo.db;
+package org.pualsa.ngauction.db;
 
 import java.util.Set;
 

@@ -1,10 +1,10 @@
-package org.alsa.firstdemo.websocket;
+package org.pualsa.ngauction.websocket;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import org.alsa.firstdemo.db.ProductStore;
+import org.pualsa.ngauction.db.ProductStore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.BinaryMessage;

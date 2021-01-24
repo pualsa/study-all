@@ -1,9 +1,9 @@
-package org.alsa.firstdemo.rest;
+package org.pualsa.ngauction.rest;
 
 import java.util.Collection;
 
-import org.alsa.firstdemo.db.Product;
-import org.alsa.firstdemo.db.ProductStore;
+import org.pualsa.ngauction.db.Product;
+import org.pualsa.ngauction.db.ProductStore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

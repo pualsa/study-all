@@ -1,4 +1,4 @@
-package org.alsa.firstdemo.websocket;
+package org.pualsa.ngauction.websocket;
 
 import java.util.Map;
 

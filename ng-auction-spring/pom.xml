@@ -11,8 +11,8 @@
 	<groupId>org.alsa</groupId>
 	<artifactId>ng-auction-spring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>firstdemo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>ng-auction-spring</name>
+	<description>Spring Boot REST and WenSocket for NgAuction</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
