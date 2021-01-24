@@ -2,7 +2,6 @@ package org.alsa.firstdemo.websocket;
 
 import java.util.Map;
 
-import org.alsa.firstdemo.db.ProductStore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.server.ServerHttpRequest;
@@ -19,10 +18,10 @@ import org.springframework.web.socket.server.support.HttpSessionHandshakeInterce
 public class WebSocketConfiguration implements WebSocketConfigurer {
 
 	@Autowired
-	private ProductStore store;
+	private SocketHandler handler;
 	
 	public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-		registry.addHandler(new SocketHandler(store), "/").setAllowedOrigins("*")
+		registry.addHandler(handler, "/").setAllowedOrigins("*")
 				// initial Request/Handshake interceptor
 				.addInterceptors(new HttpSessionHandshakeInterceptor() {
 

@@ -18,11 +18,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Component
 public class SocketHandler extends TextWebSocketHandler {
 	private List<WebSocketSession> sessions = new CopyOnWriteArrayList<>();
-	private int messagecount = 0;
 
 	private ProductStore store;
 
-	public SocketHandler(ProductStore store) {
+	public SocketHandler(@Autowired ProductStore store) {
 		this.store = store;
 	}
 
