@@ -1,0 +1,18 @@
+<h1 class="title">Add product</h1>
+<form class="form" [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <mat-form-field class="form__field">
+    <input matInput type="text" placeholder="Title" formControlName="title">
+    <mat-error>Title is too short</mat-error>
+  </mat-form-field>
+  <mat-form-field class="form__field">
+    <input matInput type="number" placeholder="Price" formControlName="price">
+    <mat-error>Cannot be less than 0.1</mat-error>
+  </mat-form-field>
+  <mat-form-field class="form__field">
+    <input matInput type="text" placeholder="Description" formControlName="description">
+  </mat-form-field>
+
+  <button class="form__submit" [disabled]="productForm.invalid || productForm.pristine || !submitEnabled" color="primary" mat-raised-button>CREATE</button>
+</form>
+
+<span>Created {{ newProductId }}</span>

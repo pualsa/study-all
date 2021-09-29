@@ -1,0 +1,15 @@
+.form {
+  font-size: 16px;
+  padding: 0 24px;
+}
+
+.form__field {
+  display: block;
+  margin-top: 16px;
+  min-width: 250px;
+}
+
+.form__submit {
+  margin-top: 16px;
+  width: 100%;
+}

@@ -1,0 +1,12 @@
+<div>
+  <table>
+    <tr>
+      <td><input type="button" value="Prev" (click)="selectDay(-1)" /></td>
+      <td>
+        <input type="button" value="{{ selectedDay | date }}" (click)="selectDay(0)" />
+      </td>
+      <td><input type="button" value="Next" (click)="selectDay(1)" /></td>
+    </tr>
+  </table>
+</div>
+<hc-workday [day]="selectedDay"></hc-workday>
