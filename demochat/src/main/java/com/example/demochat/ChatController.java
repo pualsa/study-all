@@ -39,7 +39,6 @@ public class ChatController {
             .user(userText)
             .call()
             .content();
-    response = response.replace("\n", "<br>");
 
     chatHistory.add("User: " + userText);
     chatHistory.add("Bot: " + response);
