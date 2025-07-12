@@ -1,0 +1,9 @@
+2025-07-11T14:57:42.126+02:00  INFO 2240 --- [demomcp] [main] c.e.demomcp.DemomcpApplicationTests      : Starting DemomcpApplicationTests using Java 24.0.1 with PID 2240 (started by alexei in C:\projects\demomcp)
+2025-07-11T14:57:42.133+02:00  INFO 2240 --- [demomcp] [main] c.e.demomcp.DemomcpApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2025-07-11T14:57:43.369+02:00  INFO 2240 --- [demomcp] [main] o.s.a.m.s.a.McpServerAutoConfiguration   : Enable tools capabilities, notification: true
+2025-07-11T14:57:43.473+02:00  INFO 2240 --- [demomcp] [main] o.s.a.m.s.a.McpServerAutoConfiguration   : Registered tools: 3
+2025-07-11T14:57:43.473+02:00  INFO 2240 --- [demomcp] [main] o.s.a.m.s.a.McpServerAutoConfiguration   : Enable resources capabilities, notification: true
+2025-07-11T14:57:43.474+02:00  INFO 2240 --- [demomcp] [main] o.s.a.m.s.a.McpServerAutoConfiguration   : Enable prompts capabilities, notification: true
+2025-07-11T14:57:43.475+02:00  INFO 2240 --- [demomcp] [main] o.s.a.m.s.a.McpServerAutoConfiguration   : Registered prompts: 1
+2025-07-11T14:57:43.475+02:00  INFO 2240 --- [demomcp] [main] o.s.a.m.s.a.McpServerAutoConfiguration   : Enable completions capabilities
+2025-07-11T14:57:43.737+02:00  INFO 2240 --- [demomcp] [main] c.e.demomcp.DemomcpApplicationTests      : Started DemomcpApplicationTests in 2.256 seconds (process running for 3.862)

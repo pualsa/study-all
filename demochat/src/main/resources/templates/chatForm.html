@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<h1>Local AI Model Chat</h1>
+<div>
+    <h2>Chat History</h2>
+    <ul>
+        <li th:each="msg : ${chatHistory}" th:text="${msg}"></li>
+    </ul>
+</div>
+<form th:action="@{/submit}" method="post"
+      onsubmit="document.getElementById('submitBtn').disabled = true;">
+    <label for="userText">Text:</label>
+    <input type="text" id="userText" name="userText" required style="width: 400px;"/>
+    <button type="submit" id="submitBtn">Submit</button>
+</form>
+<form th:action="@{/clear}" method="post" style="margin-top:10px;">
+    <button type="submit">Clear</button>
+</form>
+</body>
+</html>
