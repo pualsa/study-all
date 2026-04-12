@@ -7,6 +7,7 @@ import { PlanworkdayService } from '../../shared/services/planworkday.service';
   selector: 'hc-workday',
   templateUrl: './workday.component.html',
   styleUrls: ['./workday.component.css'],
+  standalone: false,
 })
 export class WorkdayComponent {
   private _day: Date;
@@ -16,13 +17,13 @@ export class WorkdayComponent {
 
   constructor(private planworkdayService: PlanworkdayService) {
     this._day = new Date();
-    this.enableHours = true;
+    this.enableHours = false;
   }
 
   @Input() set day(value: Date) {
     if (value !== undefined) {
       this._day = value;
-      this.enableHours = true;
+      this.enableHours = false;
       this.workday$ = this.planworkdayService.getWorkday(this._day);
     }
   }
@@ -36,13 +37,15 @@ export class WorkdayComponent {
   }
 
   dayClicked({ target }: any): void {
-    console.log('dayClicked ' + target.checked);
     this.enableHours = target.checked;
-    // TODO submit data
+    this.workday$ = this.planworkdayService.saveWorkday(this._day, target.checked);
   }
 
-  hourClicked(index: number, checked: boolean) {
-    console.log('hourClicked ' + index + ' - ' + checked);
-    this.workday$ = this.planworkdayService.saveWorkingSlot(this._day, index, checked);
+  onSlotClicked(index: number, checked: boolean) {
+    this.workday$ = this.planworkdayService.saveWorkingSlot(
+      this._day,
+      index,
+      checked,
+    );
   }
 }

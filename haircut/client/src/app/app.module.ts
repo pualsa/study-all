@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { SHARED_SERVICES } from './shared/services';
@@ -11,7 +11,7 @@ import { WorkdayHeaderComponent } from './workplan/workday-header/workday-header
 @NgModule({
   declarations: [AppComponent, WorkdayComponent, WorkdayHeaderComponent],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [...SHARED_SERVICES],
+  providers: [provideBrowserGlobalErrorListeners(), ...SHARED_SERVICES],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
