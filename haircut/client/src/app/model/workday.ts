@@ -30,6 +30,6 @@ export class Workday {
     if ('30' == slot.substr(3, 2)) {
       i++;
     }
-    return i;
+    return i - 8 * 2;
   }
 }

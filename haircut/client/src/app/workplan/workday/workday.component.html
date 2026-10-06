@@ -3,13 +3,24 @@
     <thead>
       <tr>
         <th>{{ wd.day | date }}</th>
-        <th><input type="checkbox" [checked]="enableHours" (change)="dayClicked($event)" /></th>
+        <th>
+          <input
+            type="checkbox"
+            [checked]="enableHours"
+            (change)="dayClicked($event)"
+          />
+        </th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let hour of wd.hours; index as i">
-        <td (click)="hourClicked(i, !hour)">{{formatHourIndex(i)}} {{hour}}</td>
-        <td><input type="checkbox" [checked]="hour" disabled="true" /></td>
+      <tr *ngFor="let hour of wd.hours; index as i"
+          (click)="onSlotClicked(i, !hour)">
+        <td>{{ formatHourIndex(i) }}</td>
+        <td>
+          <input type="checkbox" [checked]="hour" [disabled]="!enableHours"
+            (click)="$event.stopPropagation()"
+            (change)="onSlotClicked(i, $any($event.target).checked)" />
+        </td>
       </tr>
     </tbody>
   </table>

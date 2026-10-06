@@ -9,6 +9,7 @@ export enum KEY_CODE {
   selector: 'hc-workday-header',
   templateUrl: './workday-header.component.html',
   styleUrls: ['./workday-header.component.css'],
+  standalone: false,
 })
 export class WorkdayHeaderComponent {
   selectedDay: Date;

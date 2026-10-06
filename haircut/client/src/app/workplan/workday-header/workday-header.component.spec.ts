@@ -1,5 +1,8 @@
+import { CommonModule } from '@angular/common';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { SHARED_SERVICES } from '../../shared/services';
+import { WorkdayComponent } from '../workday/workday.component';
 import { WorkdayHeaderComponent } from './workday-header.component';
 
 describe('WorkdayHeaderComponent', () => {
@@ -8,7 +11,9 @@ describe('WorkdayHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WorkdayHeaderComponent ]
+      imports: [CommonModule],
+      declarations: [WorkdayHeaderComponent, WorkdayComponent],
+      providers: [...SHARED_SERVICES],
     })
     .compileComponents();
   });
